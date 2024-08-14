@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patents",
+  "info": {
+    "singularName": "patent",
+    "pluralName": "patents",
+    "displayName": "Patent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "patentOverview": {
+      "type": "text"
+    },
+    "PatentClaimsOverview": {
+      "type": "text"
+    },
+    "list": {
+      "type": "enumeration",
+      "enum": [
+        "US D652,606 S",
+        "US D667,199 S",
+        "US D666,790 S",
+        "US D678,661 S",
+        "US D692,954 S",
+        "CollarCard Always in Your Wallet",
+        "Stays in Your Wallet",
+        "CollarCard – We Put Your Brand in a Man’s Wallet 24 Hours a Day"
+      ]
+    },
+    "PatentClaims": {
+      "type": "text"
+    }
+  }
+}

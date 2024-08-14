@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AboutHeading": {
+      "type": "string"
+    },
+    "aboutParagraph": {
+      "type": "text"
+    },
+    "aboutTitle": {
+      "type": "text"
+    },
+    "tableDescription": {
+      "type": "enumeration",
+      "enum": [
+        "Value 1: CollarCards are one of the most unique and effective promotional products in the marketplace for men",
+        "Value 2: With nearly a 100% usage rate, CollarCards ensure your brand is in a man’s wallet 24 hours a day.",
+        "Value 3: CollarCards offer a low price point, making them one of the most cost-effective promotional products available."
+      ]
+    },
+    "tableHeading": {
+      "type": "text"
+    }
+  }
+}
