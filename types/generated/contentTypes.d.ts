@@ -974,6 +974,7 @@ export interface ApiPatentPatent extends Schema.CollectionType {
       ]
     >;
     PatentClaims: Attribute.Text;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
