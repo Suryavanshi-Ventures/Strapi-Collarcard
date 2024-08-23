@@ -7,11 +7,11 @@ module.exports = ({ env }) => {
     mysql: {
       connection: {
         connectionString: env('DATABASE_URL'),
-        host: env('DATABASE_HOST', 'localhost'),
+        host: env('DATABASE_HOST', 'strapi.ctyaq7q6oizr.us-east-1.rds.amazonaws.com'),
         port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        user: env('DATABASE_USERNAME', 'admin'),
+        password: env('DATABASE_PASSWORD', '24060075-8137-43e3-9433-9a9795433a02'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
@@ -28,11 +28,11 @@ module.exports = ({ env }) => {
     },
     mysql2: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
+        host: env('DATABASE_HOST', 'strapi.ctyaq7q6oizr.us-east-1.rds.amazonaws.com'),
         port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        user: env('DATABASE_USERNAME', 'admin'),
+        password: env('DATABASE_PASSWORD', '24060075-8137-43e3-9433-9a9795433a02'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
