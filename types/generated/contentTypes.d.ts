@@ -993,6 +993,42 @@ export interface ApiPatentPatent extends Schema.CollectionType {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Schema.CollectionType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    subTitle: Attribute.Text;
+    description: Attribute.Text;
+    authorImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    authorName: Attribute.String;
+    authorCompany: Attribute.String;
+    authorReview: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1017,6 +1053,7 @@ declare module '@strapi/types' {
       'api::home.home': ApiHomeHome;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::patent.patent': ApiPatentPatent;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
 }
