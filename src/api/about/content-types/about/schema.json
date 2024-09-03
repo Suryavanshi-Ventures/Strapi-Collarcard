@@ -21,15 +21,10 @@
     "aboutTitle": {
       "type": "text"
     },
-    "tableDescription": {
-      "type": "enumeration",
-      "enum": [
-        "CollarCards are one of the most unique and effective promotional products in the marketplace for men",
-        " With nearly a 100% usage rate, CollarCards ensure your brand is in a man’s wallet 24 hours a day.",
-        " CollarCards offer a low price point, making them one of the most cost-effective promotional products available."
-      ]
-    },
     "tableHeading": {
+      "type": "text"
+    },
+    "tableDescription": {
       "type": "text"
     }
   }
