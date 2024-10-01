@@ -805,6 +805,7 @@ export interface ApiAboutAbout extends Schema.CollectionType {
     aboutTitle: Attribute.Text;
     tableHeading: Attribute.Text;
     tableDescription: Attribute.Text;
+    author: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -939,6 +940,43 @@ export interface ApiNavbarNavbar extends Schema.CollectionType {
   };
 }
 
+export interface ApiOurBlogOurBlog extends Schema.CollectionType {
+  collectionName: 'our_blogs';
+  info: {
+    singularName: 'our-blog';
+    pluralName: 'our-blogs';
+    displayName: 'blog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    author: Attribute.String;
+    blogImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    date: Attribute.Date;
+    authorImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    metaTitle: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-blog.our-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-blog.our-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPatentPatent extends Schema.CollectionType {
   collectionName: 'patents';
   info: {
@@ -1046,6 +1084,7 @@ declare module '@strapi/types' {
       'api::faq.faq': ApiFaqFaq;
       'api::home.home': ApiHomeHome;
       'api::navbar.navbar': ApiNavbarNavbar;
+      'api::our-blog.our-blog': ApiOurBlogOurBlog;
       'api::patent.patent': ApiPatentPatent;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }

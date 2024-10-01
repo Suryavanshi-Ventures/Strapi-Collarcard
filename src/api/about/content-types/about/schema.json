@@ -26,6 +26,9 @@
     },
     "tableDescription": {
       "type": "text"
+    },
+    "author": {
+      "type": "string"
     }
   }
 }
