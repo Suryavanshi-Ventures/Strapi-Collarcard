@@ -953,12 +953,12 @@ export interface ApiOurBlogOurBlog extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
     author: Attribute.String;
-    blogImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    blogImg: Attribute.Media<'images' | 'videos' | 'audios' | 'files', true>;
     date: Attribute.Date;
     authorImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     metaTitle: Attribute.Text;
+    Note: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "author": {
       "type": "string"
     },
@@ -27,9 +24,9 @@
       "required": false,
       "allowedTypes": [
         "images",
-        "files",
         "videos",
-        "audios"
+        "audios",
+        "files"
       ]
     },
     "date": {
@@ -48,6 +45,9 @@
     },
     "metaTitle": {
       "type": "text"
+    },
+    "Note": {
+      "type": "blocks"
     }
   }
 }
